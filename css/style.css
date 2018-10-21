@@ -80,8 +80,11 @@ h3 {
   color: #fff;
   height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   margin: 0;
-  padding: 200px 0 260px 0;
+  /*padding: 200px 0 260px 0;*/
   background-size: cover;
+}
+#slide1 .content{/*Not having this in #slide1{} makes it so the slides aren't longer than 100vh*/
+  padding-top: 45vh;
 }
 #slide2{
   background-color: #fff;
@@ -89,28 +92,41 @@ h3 {
   height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   margin: 0 auto;
   overflow: hidden;
-  padding: 200px 0;
+  /*padding: 200px 0;*/
+}
+#slide2 .content{/*Not having this in #slide2{} makes it so the slides aren't longer than 100vh*/
+  padding-top: 200px;
 }
 #slide3{
   background: url('https://images.pexels.com/photos/7112/woman-typing-writing-windows.jpg?cs=srgb&dl=computer-desk-email-7112.jpg&fm=jpg') 50% 0 no-repeat fixed;
   color: #fff;
   height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
-  padding: 170px 0 0 0;
+  /*padding: 170px 0 0 0;*/
   background-size: cover;
+}
+#slide3 .content{/*Not having this in #slide3{} makes it so the slides aren't longer than 100vh*/
+  padding-top: 170px;
 }
 #slide4{
   background-color: #fff;
   color: #333333;
   height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
-  padding: 200px 0;
+  /*padding: 200px 0;*/
 }
+#slide4 .content{/*Not having this in #slide4{} makes it so the slides aren't longer than 100vh*/
+  padding-top: 250px;
+}
+
 #slide5{
   background: url('https://images.pexels.com/photos/7112/woman-typing-writing-windows.jpg?cs=srgb&dl=computer-desk-email-7112.jpg&fm=jpg') 50% 0 no-repeat fixed;
   height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   margin: 0 auto;
-  padding: 250px 0;
+  /*padding: 250px 0;*/
   color: #fff;
   background-size: cover;
+}
+#slide5 .content{/*Not having this in #slide5{} makes it so the slides aren't longer than 100vh*/
+  padding-top: 250px;
 }
 
 /* The skillbar stuff */
