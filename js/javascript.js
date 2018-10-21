@@ -10,6 +10,7 @@ $(document).ready(function(){
     return false;
 });
 //this makes the skill bar work
+//https://codepen.io/i-am-niall/pen/Kggyxy
 var skillsDiv = $('#skills');
 
 $(window).on('scroll', function(){

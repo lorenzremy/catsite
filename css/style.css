@@ -48,6 +48,7 @@ h3 {
   height: 80px;
   position: fixed;
   margin-top: 30px;
+  z-index: 5;/*this makes it so the header appears in front of everything it passes. Otherwise it appears under any text it scrolls past and can't be clicked*/
 }
 #nav { /*width: 410px;*/  margin-top: 20px; text-align: center;}
 #nav ul{
@@ -130,6 +131,7 @@ h3 {
 }
 
 /* The skillbar stuff */
+/*https://codepen.io/i-am-niall/pen/Kggyxy*/
 .col-centered {
   width: 800px;
 }
