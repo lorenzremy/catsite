@@ -1,13 +1,32 @@
-
+//this makes it so shit works wherever the js is added in the doc apparently.
 //https://stackoverflow.com/questions/36909827/javascript-doesnt-load/36909864
 $(document).ready(function(){
+  //this makes it so smooth scrolling works.
+  //adjust the number value to speed up or slow down scrolling
   $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
     return false;
 });
+//this makes the skill bar work
+var skillsDiv = $('#skills');
+
+$(window).on('scroll', function(){
+	var winT = $(window).scrollTop(),
+  	winH = $(window).height(),
+  	skillsT = skillsDiv.offset().top;
+  if(winT + winH  > skillsT){
+  	$('.skillbar').each(function(){
+      $(this).find('.skillbar-bar').animate({
+        width:$(this).attr('data-percent')
+      },2000);
+    });
+  }
 });
+});
+
+
 
 // var element = document.getElementById("slide2");
 //
