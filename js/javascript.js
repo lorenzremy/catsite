@@ -1,8 +1,12 @@
-$('a').click(function(){
+
+//https://stackoverflow.com/questions/36909827/javascript-doesnt-load/36909864
+$(document).ready(function(){
+  $('a').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
     return false;
+});
 });
 
 // var element = document.getElementById("slide2");
