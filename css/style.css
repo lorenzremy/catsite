@@ -78,7 +78,7 @@ h3 {
 #slide1{
   background:url('https://images.pexels.com/photos/7112/woman-typing-writing-windows.jpg?cs=srgb&dl=computer-desk-email-7112.jpg&fm=jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 600px;
+  height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   margin: 0;
   padding: 200px 0 260px 0;
   background-size: cover;
@@ -86,7 +86,7 @@ h3 {
 #slide2{
   background-color: #fff;
   color: #333333;
-  height: 300px;
+  height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   margin: 0 auto;
   overflow: hidden;
   padding: 200px 0;
@@ -94,19 +94,19 @@ h3 {
 #slide3{
   background: url('https://images.pexels.com/photos/7112/woman-typing-writing-windows.jpg?cs=srgb&dl=computer-desk-email-7112.jpg&fm=jpg') 50% 0 no-repeat fixed;
   color: #fff;
-  height: 600px;
+  height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   padding: 170px 0 0 0;
   background-size: cover;
 }
 #slide4{
   background-color: #fff;
   color: #333333;
-  height: 300px;
+  height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   padding: 200px 0;
 }
 #slide5{
   background: url('https://images.pexels.com/photos/7112/woman-typing-writing-windows.jpg?cs=srgb&dl=computer-desk-email-7112.jpg&fm=jpg') 50% 0 no-repeat fixed;
-  height: 200px;
+  height: 100vh;/*setting this to 100vh instead of a certain amount of px makes it fill the screen as it takes the size of the viewport*/
   margin: 0 auto;
   padding: 250px 0;
   color: #fff;
