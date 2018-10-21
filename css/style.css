@@ -1,4 +1,8 @@
 /* The main css file*/
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -22,6 +26,7 @@ h2 {
   margin: 0;
   padding: 0;
 }
+/*test*/
 h3 {
   font-family: Oswald;
   font-weight: normal;
