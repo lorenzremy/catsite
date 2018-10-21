@@ -1,14 +1,16 @@
-function myFunction()
-{
-alert("Hello");
-}
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
 
-var element = document.getElementById("slide2");
-
-element.scrollIntoView();
-element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+// var element = document.getElementById("slide2");
+//
+// element.scrollIntoView();
+// element.scrollIntoView(false);
+// element.scrollIntoView({block: "end"});
+// element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 
 // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //     anchor.addEventListener('click', function (e) {
@@ -20,13 +22,13 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 //     });
 // });
 
-// $(document).on('click', 'a[href^="#"]', function (event) {
-//     event.preventDefault();
-//
-//     $('html, body').animate({
-//         scrollTop: $($.attr(this, 'href')).offset().top
-//     }, 500);
-// });
+ // $(document).on('click', 'a[href^="#"]', function (event) {
+ //     event.preventDefault();
+ //
+ //     $('html, body').animate({
+ //         scrollTop: $($.attr(this, 'href')).offset().top
+ //     }, 500);
+ // });
 
 /*    $(document).ready(function() {
         $('a[href*=#]').each(function() {
