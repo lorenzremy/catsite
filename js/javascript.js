@@ -5,26 +5,40 @@ $(document).ready(function(){
   //adjust the number value to speed up or slow down scrolling
   $('a').click(function(){
     $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
+      scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
     return false;
-});
-//this makes the skill bar work
-//https://codepen.io/i-am-niall/pen/Kggyxy
-var skillsDiv = $('#skills');
+  });
+  //this makes the skill bar work
+  //https://codepen.io/i-am-niall/pen/Kggyxy
+  var skillsDiv = $('#skills');
 
-$(window).on('scroll', function(){
-	var winT = $(window).scrollTop(),
-  	winH = $(window).height(),
-  	skillsT = skillsDiv.offset().top;
-  if(winT + winH  > skillsT){
-  	$('.skillbar').each(function(){
-      $(this).find('.skillbar-bar').animate({
-        width:$(this).attr('data-percent')
-      },2000);
-    });
-  }
-});
+  $(window).on('scroll', function(){
+    var winT = $(window).scrollTop(),
+    winH = $(window).height(),
+    skillsT = skillsDiv.offset().top;
+    if(winT + winH  > skillsT){
+      $('.skillbar').each(function(){
+        $(this).find('.skillbar-bar').animate({
+          width:$(this).attr('data-percent')
+        },2000);
+      });
+    }
+  });
+
+  //Scroll to Top button stuff
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+      $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+      $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+  });
+  $('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+      scrollTop : 0                       // Scroll to top of body
+    }, 500);
+  });
 });
 
 
