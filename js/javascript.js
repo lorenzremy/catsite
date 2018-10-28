@@ -3,30 +3,62 @@
 $(document).ready(function(){
   //this makes it so smooth scrolling works.
   //adjust the number value to speed up or slow down scrolling
-  $('a').click(function(){
-    $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
+  //$('a').click(function(){
+  //  $('html, body').animate({
+  //    scrollTop: $( $(this).attr('href') ).offset().top
+  //  }, 500);
+  //  return false;
+  //});
+  //$(document).on("scroll", onScroll);
+
+  //smoothscroll
+  $('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+
+    $('a').each(function () {
+      $(this).removeClass('active');
+    })
+    $(this).addClass('active');
+
+    var target = this.hash,
+    menu = target;
+    $target = $(target);
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top+2
+    }, 500, 'swing', function () {
+      window.location.hash = target;
+      $(document).on("scroll", onScroll);
+    });
   });
-  //this makes the skill bar work
-  //https://codepen.io/i-am-niall/pen/Kggyxy
-  var skillsDiv = $('#skills');
+
 
   $(window).on('scroll', function(){
-    var winT = $(window).scrollTop(),
-    winH = $(window).height(),
-    skillsT = skillsDiv.offset().top;
-    if(winT + winH  > skillsT){
-      $('.skillbar').each(function(){
-        $(this).find('.skillbar-bar').animate({
-          width:$(this).attr('data-percent')
-        },2000);
-      });
-    }
+    var scrollPos = $(document).scrollTop();
+    $('#nav a').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('#nav ul li a').removeClass("active");
+        currLink.addClass("active");
+      }
+      else{
+        currLink.removeClass("active");
+      }
+      //skillbar stuff
+      var skillsDiv = $('#skills');
+      var winT = $(window).scrollTop(),
+      winH = $(window).height(),
+      skillsT = skillsDiv.offset().top;
+      if(winT + winH  > skillsT){
+        $('.skillbar').each(function(){
+          $(this).find('.skillbar-bar').animate({
+            width:$(this).attr('data-percent')
+          },2000);
+        });
+      }
+    });
   });
-
-  //Scroll to Top button stuff
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
       $('#return-to-top').fadeIn(200);    // Fade in the arrow
@@ -39,7 +71,14 @@ $(document).ready(function(){
       scrollTop : 0                       // Scroll to top of body
     }, 500);
   });
+
 });
+
+
+  //this makes the skill bar work
+  //https://codepen.io/i-am-niall/pen/Kggyxy
+
+  //Scroll to Top button stuff
 
 
 
